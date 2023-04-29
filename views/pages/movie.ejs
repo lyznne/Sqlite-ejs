@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="movie-body">
+    <header>
+        <%- include('../partials/nav'); %>
+    </header>
+    <main class="container">
+        <div class="movie">
+            <div class="movie-item">
+                <div class="video">
+                    <h2>
+                        <%= results.title %>
+                    </h2>
+                    <embed src="<%=results.trailer %>" type="">
+                    <aside class="movie-aside">
+                        <div class="tp">
+                            <h2>
+                                <%= results.id %>
+                            </h2>
+                            <p class="">Ratings
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <%= results.rating %>
+                            </p>
+                        </div>
+                        
+                        <span> <strong>Released year </strong>
+                            <%= results.year %>
+                        </span>
+                        <p>
+                            <strong>Genre </strong>
+                            <%= results.genre %>
+                        </p>
+                        <p> <strong>Movie Director</strong>
+                            <%= results.director %>
+                        </p>
+                        <p><strong>Movie Writers </strong>
+                            <%= results.writers %>
+                        </p>
+                    </aside>
+                </div>
+                <div class="movie-detail">
+                    <div class="img">
+                        <% if (results.image) { %>
+                            <img src="<%= results.image %>" alt="<%= results.title %>">
+                            <% } else { %>
+                                <img src="<%= results.thumbnail %>" alt="<%= results.title %>">
+                                <% } %>
+                    </div>
+                    <div class="description">
+                        <p>
+                            <%= results.description %>
+                        </p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+
+</html>

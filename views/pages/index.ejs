@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head'); %>
+</head>
+
+<body class="index-body">
+    <header class="header">
+        <%- include('../partials/nav'); %>
+    </header>
+    <main class="body">
+        <div class="movies">
+            <h1 class="title">All Movies</h1>
+            <div class="card">
+                <% movies.forEach((movie)=> { %>
+                    <div class="movie-card">
+                        <img class="poster" src="<%= movie.image %>" alt="<%= movie.title %>">
+                        <a href="/movie/<%= movie.id %>">
+                            <h2 class="movie-title">
+                                <%= movie.title %>
+                            </h2>
+                        </a>
+                        <div class="items">
+                            <p class="movie-id">
+                                <%= movie.id %>
+                            </p>
+                            <p class="movie-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <%= movie.rating %>
+                            </p>
+                        </div>
+
+                        <span class="movie-description">
+                            <%= movie.description %>
+                        </span>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <%- include('../partials/footer'); %>
+    </footer>
+</body>
+
+</html>
