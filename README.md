@@ -25,7 +25,7 @@ This is a web application built with Node.js and Express.js that displays a list
 - Displays a list of movies with their posters and titles.
 - Allows the user to view details of a specific movie, such as the genre, director, release year, and description.
 - Provides a trailer for each movie.
-- Responsive design that works on desktop and mobile devices.
+- Responsive design that works on desktop .
 
 ## Technologies Used
 
