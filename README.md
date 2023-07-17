@@ -42,3 +42,12 @@ The data for the movies was taken from [IMDb Top 250](https://www.imdb.com/chart
 ## License
 
 This project is licensed under the MIT License.
+
+
+## Website
+
+View live website [website](https://shadowed-nonchalant-clematis.glitch.me/)
+
+***enjoy 
+
+---
