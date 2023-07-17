@@ -15,12 +15,14 @@
             <div class="card">
                 <% movies.forEach((movie)=> { %>
                     <div class="movie-card">
+                       <div class="image">
                         <img class="poster" src="<%= movie.image %>" alt="<%= movie.title %>">
                         <a href="/movie/<%= movie.id %>">
                             <h2 class="movie-title">
                                 <%= movie.title %>
                             </h2>
                         </a>
+                       </div>
                         <div class="items">
                             <p class="movie-id">
                                 <%= movie.id %>
@@ -29,7 +31,8 @@
                                 <i class="fa-solid fa-star"></i>
                                 <i class="fa-solid fa-star-half-stroke"></i>
                                 <i class="fa-regular fa-star"></i>
-                                <%= movie.rating %>
+                                
+                                <span> <%= movie.rating %> </span>
                             </p>
                         </div>
 

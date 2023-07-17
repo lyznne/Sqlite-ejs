@@ -1,14 +1,67 @@
 <nav class="top">
-    <div class="logo">
-        <i class="fa-solid fa-bars fa-flip"></i>
-        <a href="/">Top Movies </a>
+    <div class="navbar">
+        <div class="top-start">
+            <div class="logo">
+                <i class="fa-solid fa-bars fa-flip"></i>
+                <a href="/">Top Movies </a>
+            </div>
+        
+            <ul>
+                <li> <a href="/">Home</a></li>
+            </ul>
+            <ul>
+                <li> <a href="/about">About</a></li>
+            </ul>
+        </div>
+        <button class="mode" onclick="toggleDarkMode()">
+            <div class="circle"></div>
+            <span>dark mode</span>
+        </button>
     </div>
-
-    <ul>
-        <li> <a href="/">Home</a></li>
-    </ul>
-    <ul>
-        <li> <a href="/about">About</a></li>
-    </ul>
+    
 
 </nav>
+
+<script>
+
+function setDarkMode() {
+    var modeBtn = document.getElementsByClassName("mode")[0];
+    var modeDiv = document.getElementsByClassName("circle")[0];
+    var darkmode = document.body;
+    
+    var isDarkMode = localStorage.getItem("darkMode");
+    if (isDarkMode === "true") {
+        modeBtn.classList.add("mode-active");
+        modeDiv.classList.add("div-active");
+        darkmode.classList.add("dark-mode");
+    } else {
+        modeBtn.classList.remove("mode-active");
+        modeDiv.classList.remove("div-active");
+        darkmode.classList.remove("dark-mode");
+    }
+}
+
+function toggleDarkMode() {
+    var modeBtn = document.getElementsByClassName("mode")[0];
+    var modeDiv = document.getElementsByClassName("circle")[0];
+    var darkmode = document.body;
+    
+    if (modeBtn.classList.contains("mode-active")) {
+        modeBtn.classList.remove("mode-active");
+        modeDiv.classList.remove("div-active");
+        darkmode.classList.remove("dark-mode");
+        localStorage.setItem("darkMode", "false");
+    } else {
+        modeBtn.classList.add("mode-active");
+        modeDiv.classList.add("div-active");
+        darkmode.classList.add("dark-mode");
+        localStorage.setItem("darkMode", "true");
+    }
+}
+
+window.onload = setDarkMode;
+</script>
+
+
+
+

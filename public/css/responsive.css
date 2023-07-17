@@ -1,0 +1,50 @@
+/* medium screen  */
+@media (max-width: 962px ) and (min-width:568px) {
+ .card {
+    grid-template-columns: repeat(2, 1fr);
+ }
+
+ .about-main {
+    flex-direction: column;
+}
+.about-container {
+    max-width: 98%;
+}
+.about-aside {
+    border: none;
+}
+.movie .movie-item  {
+    flex-direction: column;
+}
+.video embed {
+    flex: 33.33%;
+    width: 540px;
+}
+}
+
+/* small screen  */
+@media ( max-width: 568px ){
+    .movie .movie-item  {
+        flex-direction: column;
+    }
+    .movies {
+        margin: 0 auto ;
+    }
+    .about-container {
+        max-width: 100%;
+    }
+    .about-main {
+        flex-direction: column;
+
+    }
+    .card {
+        grid-template-columns: repeat(1, 1fr);
+     }
+     .about-aside {
+        border: none;
+    }
+    .video embed {
+        width: 350px;
+    }
+
+}
