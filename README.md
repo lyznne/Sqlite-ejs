@@ -6,7 +6,7 @@ This is a web application built with Node.js and Express.js that displays a list
 
 ### Home Page
 
-![Home Page](./public/images/main.png)
+![Home Page](./public/images/topmovies.png)
 ![movies ](./public/images/light-mode.png)
 
 ### Movie Detail Page
